@@ -1,0 +1,221 @@
+<?xml version="1.0" ?>
+<robot name="qrteam_fusion" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find qrteam_fusion_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find qrteam_fusion_description)/urdf/qrteam_fusion.trans" />
+<xacro:include filename="$(find qrteam_fusion_description)/urdf/qrteam_fusion.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0020542122204478016 -7.085583154434214e-05 0.3297767084922408" rpy="0 0 0"/>
+    <mass value="50.23002803653495"/>
+    <inertia ixx="3.090604" iyy="2.957905" izz="4.455788" ixy="0.002625" iyz="-0.00172" ixz="0.179845"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_wheel_1">
+  <inertial>
+    <origin xyz="6.353191570607208e-06 -0.09599480116610787 0.00017878868257395486" rpy="0 0 0"/>
+    <mass value="20.194629183024283"/>
+    <inertia ixx="0.132007" iyy="0.206335" izz="0.131564" ixy="-3e-06" iyz="-0.000246" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.325003 0.305589 -0.146633" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.325003 0.305589 -0.146633" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_wheel_1">
+  <inertial>
+    <origin xyz="-7.267695750601266e-06 0.09599436271583278 0.00017907071490411153" rpy="0 0 0"/>
+    <mass value="20.194629183024283"/>
+    <inertia ixx="0.132007" iyy="0.206335" izz="0.131564" ixy="-3e-06" iyz="0.000246" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.325043 -0.305113 -0.146702" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.325043 -0.305113 -0.146702" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_back_wheel_1">
+  <inertial>
+    <origin xyz="-6.677739719240794e-06 0.09599436271585804 0.00017842969872644554" rpy="0 0 0"/>
+    <mass value="20.194629183024283"/>
+    <inertia ixx="0.132007" iyy="0.206335" izz="0.131564" ixy="-3e-06" iyz="0.000246" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.321638 -0.305113 -0.146668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/front_back_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.321638 -0.305113 -0.146668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/front_back_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_wheel_1">
+  <inertial>
+    <origin xyz="6.943147454530063e-06 -0.09599480116659342 0.00017907071536441" rpy="0 0 0"/>
+    <mass value="20.194629183024283"/>
+    <inertia ixx="0.132007" iyy="0.206335" izz="0.131564" ixy="-3e-06" iyz="-0.000246" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.321658 0.305589 -0.146702" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/back_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.321658 0.305589 -0.146702" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/back_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="imu_frame_1">
+  <inertial>
+    <origin xyz="-4.0623827618144204e-07 -2.1922512724898845e-07 0.0009998814992088767" rpy="0 0 0"/>
+    <mass value="0.009168799999999984"/>
+    <inertia ixx="0.0" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.009908 0.000238 -0.411586" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/imu_frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.009908 0.000238 -0.411586" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/imu_frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="laser_frame_1">
+  <inertial>
+    <origin xyz="0.0014995938469886672 -2.0705196583347134e-07 -1.184382540930784e-07" rpy="0 0 0"/>
+    <mass value="0.007398450699203964"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.299833 0.000238 -0.292356" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/laser_frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.299833 0.000238 -0.292356" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/laser_frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gps_frame_1">
+  <inertial>
+    <origin xyz="-0.0003062415225861814 -2.1357971140230142e-07 0.010676465040457273" rpy="0 0 0"/>
+    <mass value="0.5557884986952562"/>
+    <inertia ixx="0.000183" iyy="0.000172" izz="0.000287" ixy="0.0" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.260358 0.000238 -0.371731" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/gps_frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.260358 0.000238 -0.371731" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qrteam_fusion_description/meshes/gps_frame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="JointFrontRight" type="continuous">
+  <origin xyz="0.325003 -0.305589 0.146633" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_right_wheel_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="JointFrontLeft" type="continuous">
+  <origin xyz="0.325043 0.305113 0.146702" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_left_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="JointBackLeft" type="continuous">
+  <origin xyz="-0.321638 0.305113 0.146668" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_back_wheel_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="JointBackRight" type="continuous">
+  <origin xyz="-0.321658 -0.305589 0.146702" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="back_right_wheel_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="JointImu" type="fixed">
+  <origin xyz="0.009908 -0.000238 0.411586" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="imu_frame_1"/>
+</joint>
+
+<joint name="JointScan" type="fixed">
+  <origin xyz="0.299833 -0.000238 0.292356" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="laser_frame_1"/>
+</joint>
+
+<joint name="JointGps" type="fixed">
+  <origin xyz="-0.260358 -0.000238 0.371731" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="gps_frame_1"/>
+</joint>
+
+</robot>

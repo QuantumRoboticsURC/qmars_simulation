@@ -1,0 +1,23 @@
+qrteam_fusion_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  JointFrontRight_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: JointFrontRight
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  JointFrontLeft_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: JointFrontLeft
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  JointBackLeft_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: JointBackLeft
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  JointBackRight_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: JointBackRight
+    pid: {p: 100.0, i: 0.01, d: 10.0}

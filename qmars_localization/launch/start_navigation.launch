@@ -1,0 +1,12 @@
+<launch>
+
+    <!--- Start AMCL Localization -->
+    <include file="$(find qmars_localization)/launch/start_amcl_localization.launch" />
+    
+    <!-- Start EKF Localization -->
+    <include file="$(find qmars_localization)/launch/start_ekf_localization.launch" />
+    
+    <!-- Start Move Base -->
+    <include file="$(find qmars_localization)/launch/move_base_map.launch" />
+
+</launch>

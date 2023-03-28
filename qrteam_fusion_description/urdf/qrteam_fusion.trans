@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<robot name="qrteam_fusion" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="JointFrontRight_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="JointFrontRight">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="JointFrontRight_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="JointFrontLeft_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="JointFrontLeft">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="JointFrontLeft_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="JointBackLeft_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="JointBackLeft">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="JointBackLeft_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="JointBackRight_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="JointBackRight">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="JointBackRight_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

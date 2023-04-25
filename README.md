@@ -8,6 +8,6 @@ In order to run it you'll have to run in the terminal the following command:
 roslaunch qrteam_fusion_description gazebo.launch
 ```
 
-This is wht you will see in gebo
+This is what you will see in gazebo:
 
-![image of the gebo](https://user-images.githubusercontent.com/69489228/234375989-de45a1a4-7d8d-470d-afa1-4ab3dc48fc90.png)
+![image of gazebo](https://user-images.githubusercontent.com/69489228/234375989-de45a1a4-7d8d-470d-afa1-4ab3dc48fc90.png)
